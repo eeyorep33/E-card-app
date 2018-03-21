@@ -1,7 +1,8 @@
 const express = require('express')
 const app = express()
 const bodyparser = require('body-parser')
-const card_items = require('./test_data')
+const card = require('../routes/cardRoute')
+const createdCard = require('../routes/createdCardRoute')
 const email = require("emailjs");
 require('dotenv').config()
 console.log(process.env.DB_USER)
@@ -27,19 +28,6 @@ app.listen(8080, () => {
     console.log('Server Started on http://localhost:8080');
     console.log('Press CTRL + C to stop server');
 })
-app.get('/cards', (req,res)=>{
-    console.log(card_items)
-    res.send(card_items)
-})
-app.post('/createdCard', (req, res) => {
-    
-          res.send("card sent!")
-    })
-// server.send({
-//     text: "i hope this works",
-//     from: "eeyorep33@gmail.com",
-//     to: "eeyorep33@gmail.com",
-//     cc: "",
-//     subject: "testing emailjs"
-// }, function (err, message) { console.log(err || message); });
+card(app)
+createdCard(app, server)
 

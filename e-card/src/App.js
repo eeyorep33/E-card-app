@@ -25,6 +25,21 @@ class App extends Component {
     .catch((error) => {
             console.log(error)
     })
+    axios.get('http://localhost:8080/createdCards')
+    .then(res => { 
+             this.setState({
+        card_items: res.data
+      })      
+    })
+    .catch((error) => {
+            console.log(error)
+    })
+  }
+  findCard=(id)=>{
+let card=this.state.createdCards.filter((e)=>{
+  return e.id===id
+})
+return card
   }
   filterItems = (cat) => {
     let cardList = []
@@ -33,16 +48,22 @@ class App extends Component {
     })
     return cardList
   }
-  handleSubmit=(e)=>{
+  handleSubmit=(e, index)=>{
+    console.log(index)
 e.preventDefault()
  let sendername=e.target.senderName.value
 let senderemail=e.target.senderEmail.value
 let recipientname=e.target.recipientName.value
 let recipientemail=e.target.recipientEmail.value
+let source=this.state.card_items.filter((el)=>{
+  return el.id===index
+})[0]
+console.log(source)
 let message=e.target.message.value
-let newCard={ sendername:sendername, senderEmail:senderemail,
- recipientName: recipientname, recipientEmail: recipientemail, message:message}  
- axios.post('http://localhost:8080/createCard', newCard)
+let newCard={ senderName:sendername, senderEmail:senderemail,
+ recipientName: recipientname, recipientEmail: recipientemail, source:source.source, message:message} 
+ console.log(newCard) 
+ axios.post('http://localhost:8080/createdCards', newCard)
       .then((res) => {
         this.setState({ createdCards: res.data })
       })
@@ -116,6 +137,8 @@ e.target.message.value=''
           inventory={this.state.card_items}
             cards={this.filterItems('wedding')}
             {...props} />} />
+            <Route path="/createdCards/:id" render={(props)=><SentCards
+            sentCards={this.state.createdCards} find={this.findCard}{...props}/>} />
         </Switch>
         </section>
         </article>
