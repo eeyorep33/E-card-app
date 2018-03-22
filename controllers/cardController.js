@@ -8,6 +8,7 @@ exports.getCards = () => {
       return Card.fetchAll()
             .then(result => {
                   const cards = result.models.map(card => {
+                        console.log(card.attributes.source);
                         return card.attributes
                   })
                   return cards
@@ -15,4 +16,4 @@ exports.getCards = () => {
             .catch(err => {
                   console.log(err)
             })
-}
+} 
