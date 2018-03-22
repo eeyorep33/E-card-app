@@ -1,0 +1,35 @@
+import React, { Component } from 'react';
+import axios from 'axios'
+
+class SentCards extends Component {
+      constructor() {
+            super();
+            this.state = {
+                  sentCard: ''
+            }
+      }
+      findCard = (id) => {
+            let card = {}
+            axios.get('/createdCards/' + id)
+                  .then(res => {
+                        this.setState({ sentCard: res.data })
+                  })
+                  .catch((error) => {
+                        console.log(error)
+                  })
+            return <div>
+                  <img className="imgDetails" src={this.state.sentCard.source} />
+                  <p className="message">{this.state.sentCard.message}</p>
+            </div>
+      }
+      render() {
+            const { match, location } = this.props
+            let param = parseInt(this.props.match.params.id)
+            return (
+                  <div>
+                        {this.findCard(param)}
+                  </div>
+            )
+      }
+}
+export default SentCards
