@@ -7,7 +7,7 @@ module.exports = (app, server) => {
       app.post('/createdCards', (req, res) => {
             createdCards.createCard(req.body).then((cards) => {
                   server.send({
-                        text: "click the link to view your card! http://localhost:3000/createdCards/" + cards.attributes.id,
+                        text: "click the link to view your card! https://evelynsecards.herokuapp.com/createdCards/" + cards.attributes.id,
                         from: "eeyorep33@gmail.com",
                         to: req.body.recipientEmail,
                         cc: req.body.senderEmail,

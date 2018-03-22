@@ -21,7 +21,6 @@ exports.getCard = (id) => {
             .then(card => {
                   return card
             })
-      console.log(card)
             .catch(err => {
                   console.log(err)
             })

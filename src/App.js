@@ -21,8 +21,7 @@ class App extends Component {
     this.setState({ userName: name, email: email });
     axios.get('/cards')
       .then(res => {
-        console.log(res.data);
-        this.setState({
+                this.setState({
           card_items: res.data
         })
       })
@@ -47,8 +46,7 @@ class App extends Component {
     })
     return cardList
   }
-  handleSubmit = (e, index) => {
-    console.log(index)
+  handleSubmit = (e, index) => {   
     e.preventDefault()
     let sendername = e.target.senderName.value
     let senderemail = e.target.senderEmail.value
@@ -56,15 +54,13 @@ class App extends Component {
     let recipientemail = e.target.recipientEmail.value
     let source = this.state.card_items.filter((el) => {
       return el.id === index
-    })[0]
-    console.log(source)
+    })[0]    
     let message = e.target.message.value
     let newCard = {
       senderName: sendername, senderEmail: senderemail,
       recipientName: recipientname, recipientEmail: recipientemail, source: source.source, message: message
     }
-    console.log(newCard)
-    axios.post('/createdCards', newCard)
+        axios.post('/createdCards', newCard)
       .then((res) => {
         this.setState({ createdCards: res.data })
       })
