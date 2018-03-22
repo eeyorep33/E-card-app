@@ -14,6 +14,7 @@
       display:inline-block}
     .secDiv{width:90%; float:right; margin-top: 15px}
     .name{
+      min-width:8em;
       margin-left:230px;
       font-family: 'Niconne', cursive;font-size:20px;
       color:#DEA0FF}
