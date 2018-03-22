@@ -14,14 +14,16 @@ class Cards extends Component {
                         || path === '/cards/christmas'
                         || path === '/cards/easter') {
                         return <div>
-                              {this.props.cards.map((item, i) =>
-                                    <div className="row divRow">
+                              {this.props.cards.map((item, i) =>{
+                           
+                                    return (<div className="row divRow">
                                           <div className="col-4 ">
+                                          <span>{item.source}</span>
                                                 <img className="cards img-responsive" src={item.source} />
                                                 <Link to={match.url + '/' + item.id}><p className="name">{item.name}</p>
                                                 </Link>
                                           </div>
-                                    </div>)}
+                                    </div>)})}
                         </div>
                   }
             }
