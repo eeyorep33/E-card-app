@@ -18,7 +18,7 @@ class Cards extends Component {
                            
                                     return (<div className="row divRow">
                                           <div className="col-4 ">
-                                          <span>{item.source} + Hello</span>
+                                                <span>{`${item.source} hello`}</span>
                                                 <img className="cards img-responsive" src={item.source} />
                                                 <Link to={match.url + '/' + item.id}><p className="name">{item.name}</p>
                                                 </Link>
