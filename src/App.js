@@ -21,6 +21,7 @@ class App extends Component {
     this.setState({ userName: name, email: email });
     axios.get('/cards')
       .then(res => {
+        console.log(res.data);
         this.setState({
           card_items: res.data
         })
