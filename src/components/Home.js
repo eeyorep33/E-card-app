@@ -3,7 +3,6 @@ import { Link, Switch, Route } from 'react-router-dom';
 import Cards from './cards_page';
 class Home extends Component {
       noUsername = (username) => {
-            console.log(username)
             if (!username) {
                   return <form onSubmit={this.props.createUser} className="labelDisplay">
                         <label>Username</label>
@@ -15,14 +14,14 @@ class Home extends Component {
             }
             else {
                   return <div>
-                      <img src="images/spring.jpg"/>
+                        <h2 className="username">Welcome {this.props.username}</h2>
+                        <img src="images/spring_text.jpg" />
                   </div>
             }
       }
       render() {
             return (
                   <div className="container-fluid">
-                        <h1 className="title">Send free E-cards</h1>
                         {this.noUsername(this.props.username)}
                   </div>
             )

@@ -97,5 +97,11 @@
       margin-top:40px; 
       font-size:30px; 
       font-family: 'Niconne', cursive; }
+      .banner{margin-top:100px}
+      .username{
+        text-align:center; 
+        font-size:30px; 
+        font-family:'Niconne', cursive;
+        color:#DEA0FF}
 
 
