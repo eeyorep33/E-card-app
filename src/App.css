@@ -1,109 +1,117 @@
 .title{
-      text-align: center; 
-      font-size: 80px; 
-      color:#DEA0FF; 
-      font-family: 'Great Vibes', cursive;
-      margin-top:10px}
-    .cards{
-      width:300px; 
-      height:200px; 
-      margin-left:90px; 
-      margin-right:80px;
-      border: solid 2px #B9DDFF}
-    .divRow{
-      display:inline-block}
-    .secDiv{width:90%; float:right; margin-top: 15px}
-    .name{
-      min-width:8em;
-      margin-left:200px;
-      font-family: 'Niconne', cursive;font-size:20px;
-      color:#DEA0FF}
-      .name:hover{color:#B9DDFF}
-    .navBar{
-      background-color:#84FFCE;
-      margin-left:-20px; 
-      margin-right:-20px}
-    .homeButton{
-      margin-left:10px; 
-      margin-top:5px; 
-      margin-bottom: 5px; 
-      background-color:white;}
-    .navLinks{
-      color:#DEA0FF; 
-      font-size:25px;
-      font-family: 'Niconne', cursive
-    }
-    .navLinks:hover{
-      color:#B9DDFF}
-    .menuDiv{
-      margin-top:15px;
-      display:inline-block;
-      width:10%; 
-      height:100%; 
-      padding-bottom:100%; 
-      border: 2px solid #DEA0FF; 
-      margin-left:-15px }
-    .listItems{
-      list-style:none; 
-      padding-left:0; 
-      text-align:center}
-    .listButton{
-      width:100%; 
-      margin-left:-5px;
-      margin-top: 5px;
-      margin-bottom:5px; 
-       background-color:#84FFCE}
-    .imgDetails{
-      width:600px; 
-      height:auto; 
-      margin-left:auto; 
-      margin-right:auto; 
-      display:block; 
-       border: solid 2px #B9DDFF}
-    .imgDiv{
-      margin-left:150px; 
-      width:80%; 
-      height:80%; 
-      background-color:#FFFFA7; 
-      padding-bottom:200px}
-    .msgArea{
-      width: 1000px; 
-      height: 500px}
-    .inputDisplay{
-      display:block; 
-      margin-left:auto; 
-      margin-right:auto}
-    .labelDisplay{
-      text-align:center;
-      font-family: 'Niconne', cursive;
-      font-size:25px}
-    .submitButton{
-      margin-left:auto; 
-      margin-right: auto; 
-      display: block; 
-      margin-top:10px; 
-      background-color:white; 
-      color:#DEA0FF; 
-      border: 1px solid #B9DDFF }
-    .menuLinks{
-      color:#DEA0FF; 
-      font-family: 'Niconne', cursive;
-      font-size:25px; 
-      text-shadow: 1px 1px white}
-    .menuLinks:hover{
-      color:#B9DDFF}
-    .message{
-      text-align:center; 
-      margin-top:40px; 
-      font-size:30px; 
-      font-family: 'Niconne', cursive; }
-      .banner{margin-top:25px;
-      width:100%}
-      .username{
-        margin-top:20px;
-        text-align:center; 
-        font-size:30px; 
-        font-family:'Niconne', cursive;
-        color:#DEA0FF}
+  text-align: center; 
+  font-size: 80px; 
+  color:#DEA0FF; 
+  font-family: 'Great Vibes', cursive;
+  margin-top:10px}
+.cards{
+  width:300px; 
+  height:200px; 
+  margin-left:90px; 
+  margin-right:80px;
+  border: solid 2px #B9DDFF}
+.divRow{
+  display:inline-block}
+.secDiv{
+  width:90%; 
+  float:right; 
+  margin-top: 15px}
+.name{
+  min-width:8em;
+  margin-left:200px;
+  font-family: 'Niconne', cursive;font-size:20px;
+   color:#DEA0FF}
+.name:hover{color:#B9DDFF}
+.navBar{
+  background-color:#84FFCE;
+  margin-left:-20px; 
+  margin-right:-20px}
+.homeButton{
+  margin-left:10px; 
+  margin-top:5px; 
+  margin-bottom: 5px; 
+  background-color:white;}
+.navLinks{
+  color:#DEA0FF; 
+  font-size:25px;
+  font-family: 'Niconne', cursive    }
+.navLinks:hover{
+  color:#B9DDFF}
+.menuDiv{
+  margin-top:15px;
+  display:inline-block;
+  width:10%; 
+  height:100%; 
+  padding-bottom:100%; 
+  border: 2px solid #DEA0FF; 
+  margin-left:-15px }
+.listItems{
+  list-style:none; 
+  padding-left:0; 
+  text-align:center}
+.listButton{
+  width:100%; 
+  margin-left:-5px;
+  margin-top: 5px;
+  margin-bottom:5px; 
+  background-color:#84FFCE}
+.imgDetails{
+  width:600px; 
+  height:auto; 
+  margin-left:auto; 
+  margin-right:auto; 
+  display:block; 
+  border: solid 2px #B9DDFF}
+.imgDiv{
+  margin-left:150px; 
+  width:80%; 
+  height:80%; 
+  background-color:#FFFFA7; 
+  padding-bottom:200px}
+.msgArea{
+  width: 1000px; 
+  height: 500px}
+.inputDisplay{
+  display:block; 
+  margin-left:auto; 
+  margin-right:auto}
+.labelDisplay{
+  text-align:center;
+  font-family: 'Niconne', cursive;
+  font-size:25px}
+.submitButton{
+  margin-left:auto; 
+  margin-right: auto; 
+  display: block; 
+  margin-top:10px; 
+  background-color:white; 
+  color:#DEA0FF; 
+  border: 1px solid #B9DDFF }
+.menuLinks{
+  color:#DEA0FF; 
+  font-family: 'Niconne', cursive;
+  font-size:25px; 
+  text-shadow: 1px 1px white}
+.menuLinks:hover{
+  color:#B9DDFF}
+.message{
+  text-align:center; 
+  margin-top:40px; 
+  font-size:30px; 
+  font-family: 'Niconne', cursive; }
+.banner{
+  margin-top:25px;
+  width:100%}
+.username{
+  margin-top:20px;
+  text-align:center; 
+  font-size:30px; 
+  font-family:'Niconne', cursive;
+  color:#DEA0FF}
+.featured{
+  font-size: 40px; 
+  text-align:center; 
+  color:#DEA0FF;
+  font-family:'Niconne', cursive}
 
 

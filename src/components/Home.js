@@ -16,6 +16,7 @@ class Home extends Component {
                   return <div>
                         <h2 className="username">Welcome {this.props.username}</h2>
                         <img className="banner"src="images/spring_text.jpg" />
+                        <h1 className="featured">Featured Cards</h1>
                   </div>
             }
       }
