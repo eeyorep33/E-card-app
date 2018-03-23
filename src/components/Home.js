@@ -24,8 +24,7 @@ class Home extends Component {
                              (<div className="row divRow">
                              <div className="col-4 ">                                                                      
                                    <img className="cards img-responsive" src={item.source} />
-                                   {/* <Link to={match.url + '/' + item.id}><p className="name">{item.name}</p>
-                                   </Link> */}
+                                  
                              </div>
                        </div>)})}
                   </div>
