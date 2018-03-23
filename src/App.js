@@ -18,10 +18,7 @@ class App extends Component {
   componentDidMount() {
         let name = localStorage.getItem("username")
     let email = localStorage.getItem("email")
-    console.log(name)
-    console.log(email)
-
-    this.setState({ username: name, email: email });
+        this.setState({ username: name, email: email });
     axios.get('/cards')
       .then(res => {
                 this.setState({
