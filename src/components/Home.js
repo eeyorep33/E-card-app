@@ -20,7 +20,7 @@ class Home extends Component {
                         <img className="banner"src="images/spring_text.jpg" />
                         <h1 className="featured">Featured Cards</h1>
                         <div className="featuredDiv"></div>
-                                                {this.props.inventory.filter((item)=>{return item.id ===item.id %7===0}).map((item)=>{
+                                                {this.props.inventory.map((item)=>{
                              (<div className="row divRow">
                              <div className="col-4 ">                                                                      
                                    <img className="cards img-responsive" src={item.source} />
