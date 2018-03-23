@@ -135,7 +135,7 @@ class App extends Component {
                 inventory={this.state.card_items}
                 cards={this.filterItems('wedding')}
                 {...props} />} />
-              <Route path="/createdCards/:id" render={(props) => <SentCards
+              <Route path="/createdCards/find/:id" render={(props) => <SentCards
                 sentCards={this.state.createdCards}{...props} />} />
             </Switch>
           </section>
