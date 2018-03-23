@@ -21,10 +21,11 @@ class Home extends Component {
                         <div className="featuredDiv"></div>
                         {this.props.inventory.filter((item)=>{return item.id %7===0}).map((item)=>{
                              (<div className="row divRow">
-                             <div className="col-4 ">                                               
+                             <div className="col-4 ">  
+                             {console.log(item.id)}                                             
                                    <img className="cards img-responsive" src={item.source} />
-                                   <Link to={match.url + '/' + item.id}><p className="name">{item.name}</p>
-                                   </Link>
+                                   {/* <Link to={match.url + '/' + item.id}><p className="name">{item.name}</p>
+                                   </Link> */}
                              </div>
                        </div>)})}
                   </div>
