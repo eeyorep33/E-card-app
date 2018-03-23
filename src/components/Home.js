@@ -17,7 +17,7 @@ class Home extends Component {
                   if(this.props.inventory.length<1){
                         return<div><h1>Loading cards</h1></div>
                   }else{
-                  return <div>
+                  return  (<div>
                         <h2 className="username">Welcome {this.props.username}</h2>
                         <img className="banner"src="images/spring_text.jpg" />
                         <h1 className="featured">Featured Cards</h1>
@@ -29,7 +29,7 @@ class Home extends Component {
                                   
                              </div>
                        </div>)})}
-                  </div>}
+                  </div>)}
             }
       }
       render() {
