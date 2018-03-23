@@ -15,7 +15,7 @@ class Home extends Component {
             else {
                   return <div>
                         <h2 className="username">Welcome {this.props.username}</h2>
-                        <img src="images/spring_text.jpg" />
+                        <img className="banner"src="images/spring_text.jpg" />
                   </div>
             }
       }
