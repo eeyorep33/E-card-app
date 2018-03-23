@@ -11,8 +11,8 @@ class App extends Component {
     super();
     this.state = {
       card_items: [],
-      username: null,
-      email: null
+      username: '',
+      email: ''
     }
   }
   componentDidMount() {
