@@ -10,7 +10,7 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      card_items: [],
+      card_items: null,
       username: "",
       email: ""
     }
