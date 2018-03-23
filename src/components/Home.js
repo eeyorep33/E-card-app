@@ -30,6 +30,8 @@ class Home extends Component {
             }
       }
       render() {
+      const { match, location } = this.props
+            
             return (
                   <div className="container-fluid">
                         {this.noUsername(this.props.username)}
