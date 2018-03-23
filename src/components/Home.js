@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link, Switch, Route } from 'react-router-dom';
 import Cards from './cards_page';
+const { match, location } = this.props
 class Home extends Component {
       noUsername = (username) => {
             if (!username) {
@@ -30,7 +31,7 @@ class Home extends Component {
             }
       }
       render() {
-      const { match, location } = this.props
+     
             
             return (
                   <div className="container-fluid">
