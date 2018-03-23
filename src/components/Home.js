@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Link, Switch, Route } from 'react-router-dom';
 import Cards from './cards_page';
-const { match, location } = this.props
 class Home extends Component {
       noUsername = (username) => {
             console.log(this.props.inventory)
