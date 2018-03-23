@@ -11,13 +11,14 @@ class App extends Component {
     super();
     this.state = {
       card_items: [],
-      username: '',
-      email: ''
+      username: null,
+      email: null
     }
   }
   componentDidMount() {
-    let name = localStorage.getItem("userName")
+        let name = localStorage.getItem("userName")
     let email = localStorage.getItem("email")
+
     this.setState({ userName: name, email: email });
     axios.get('/cards')
       .then(res => {
