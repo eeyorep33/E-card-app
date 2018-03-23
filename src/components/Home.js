@@ -17,6 +17,15 @@ class Home extends Component {
                         <h2 className="username">Welcome {this.props.username}</h2>
                         <img className="banner"src="images/spring_text.jpg" />
                         <h1 className="featured">Featured Cards</h1>
+                        <div className="featuredDiv"></div>
+                        {this.props.cards.filter((item)=>{return item.id %7===0}).map((item)=>{
+                             (<div className="row divRow">
+                             <div className="col-4 ">                                               
+                                   <img className="cards img-responsive" src={item.source} />
+                                   <Link to={match.url + '/' + item.id}><p className="name">{item.name}</p>
+                                   </Link>
+                             </div>
+                       </div>)})}
                   </div>
             }
       }

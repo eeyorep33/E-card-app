@@ -109,9 +109,11 @@
   font-family:'Niconne', cursive;
   color:#DEA0FF}
 .featured{
+  margin-top:20px;
   font-size: 40px; 
   text-align:center; 
   color:#DEA0FF;
   font-family:'Niconne', cursive}
+.featuredDiv{height:3px; background-color:#84FFCE}
 
 
