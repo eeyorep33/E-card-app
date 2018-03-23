@@ -15,7 +15,7 @@ class App extends Component {
       email: ""
     }
   }
-  componentDidMount() {
+  componentWillMount() {
         let name = localStorage.getItem("username")
     let email = localStorage.getItem("email")
         this.setState({ username: name, email: email });
