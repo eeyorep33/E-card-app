@@ -11,14 +11,14 @@ class App extends Component {
     super();
     this.state = {
       card_items: [],
-      username: '',
-      email: ''
+      username: "",
+      email: ""
     }
   }
   componentDidMount() {
         let name = localStorage.getItem("userName")
     let email = localStorage.getItem("email")
-    console.log(username)
+    console.log(name)
     console.log(email)
 
     this.setState({ userName: name, email: email });
