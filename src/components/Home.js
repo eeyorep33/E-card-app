@@ -15,7 +15,7 @@ class Home extends Component {
             }
             else {
                   return <div>
-                        <p>Welcome {username}</p>
+                      <img src="images/banner.jpg"/>
                   </div>
             }
       }
