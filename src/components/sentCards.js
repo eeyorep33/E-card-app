@@ -9,7 +9,7 @@ class SentCards extends Component {
             }
       }
       findCard = (id) => {
-                       axios.get('/createdCards/' + id)
+            axios.get('/createdCards/' + id)
                   .then(res => {
                         this.setState({ sentCard: res.data })
                         console.log(res.data)
@@ -18,10 +18,8 @@ class SentCards extends Component {
                         console.log(error)
                   })
             return <div>
-                  {console.log("hello")}
                   <img className="imgDetails" src={this.state.sentCard.source} />
                   <p className="message">{this.state.sentCard.message}</p>
-                  <span>hello</span>
             </div>
       }
       render() {
