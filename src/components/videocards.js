@@ -5,8 +5,7 @@ class VideoCards extends Component {
       render() {
             const { match, location } = this.props
             const cards_page = (path) => {
-                  console.log(this.props.cards)
-                  if (path === '/videocards/easter'
+                  if (path === '/cards/easter'
                         || path === '/videocards/birthday'
                         || path === '/videocards/anniversary'
                         || path === '/videocards/get_well'
@@ -19,7 +18,7 @@ class VideoCards extends Component {
                            
                                     return (<div className="row divRow">
                                           <div className="col-4 ">                                               
-                                                <video controls src={item.source}></video>
+                                                <video className="cards img-responsive" src={item.source}></video>
                                                 <Link to={match.url + '/' + item.id}><p className="name">{item.name}</p>
                                                 </Link>
                                           </div>
