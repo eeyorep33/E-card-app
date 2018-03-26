@@ -6,6 +6,7 @@ import Cards from './components/cards_page'
 import Home from './components/Home'
 import SentCards from './components/sentCards'
 import VideoHome from './components/videoHome'
+import VideoCards from './components/videocards'
 
 class App extends Component {
   constructor() {
