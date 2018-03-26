@@ -81,7 +81,7 @@ class App extends Component {
           <button className="btn homeButton"> <Link className="navLinks" to="/">Home</Link></button>
         </div>
        <article>
-        <aside className="menuDiv divRow">
+        <aside className="menuDiv">
             <ul className='listItems'>
               <li><button className="listButton"> <Link className="menuLinks" to="/cards/birthday">Birthday</Link></button></li>
               <li><button className="listButton"> <Link className="menuLinks" to="/cards/christmas">Christmas</Link></button></li>
