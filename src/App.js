@@ -33,7 +33,7 @@ class App extends Component {
       axios.get('/animatedcards')
       .then(res => {
                 this.setState({
-          card_items: res.data
+          videocards: res.data
         })
       })
       .catch((error) => {
@@ -56,6 +56,13 @@ class App extends Component {
   filterItems = (cat) => {
     let cardList = []
     cardList = this.state.card_items.filter((el) => {
+      return el.catagory === cat;
+    })
+    return cardList
+  }
+  filterVideos = (cat) => {
+    let cardList = []
+    cardList = this.state.videocards.filter((el) => {
       return el.catagory === cat;
     })
     return cardList
@@ -92,7 +99,8 @@ class App extends Component {
       <div className="container-fluid">
         <h1 className="title">Evelyn's E-Cards</h1>
         <div className="navBar">
-          <button className="btn homeButton"> <Link className="navLinks" id='hello' to="/">Home</Link></button>
+          <button className="btn homeButton"> <Link className="navLinks"  to="/">Home</Link></button>
+          <button className="btn homeButton"> <Link className="navLinks"  to="/videohome">Video</Link></button>
         </div>
        <article>
         <aside className="menuDiv">
@@ -120,7 +128,7 @@ class App extends Component {
                 username={this.state.username}
                 inventory={this.state.card_items}
                 {...props} />} />}
-          <Route path="/cards/birthday" render={(props) => <Cards
+              <Route path="/cards/birthday" render={(props) => <Cards
                 submit={this.handleSubmit}
                 inventory={this.state.card_items}
                 cards={this.filterItems('birthday')}
@@ -154,6 +162,41 @@ class App extends Component {
                 submit={this.handleSubmit}
                 inventory={this.state.card_items}
                 cards={this.filterItems('wedding')}
+                {...props} />} />
+                <Route path="/videocards/birthday" render={(props) => <Cards
+                submit={this.handleSubmit}
+                inventory={this.state.videocards}
+                cards={this.filterVideos('birthday')}
+                {...props} />} />
+              <Route path="/videocards/christmas" render={(props) => <Cards
+                submit={this.handleSubmit}
+                inventory={this.state.videocards}
+                cards={this.filterVideos('christmas')}
+                {...props} />} />
+              <Route path="/videocards/valentines" render={(props) => <Cards
+                submit={this.handleSubmit}
+                inventory={this.state.videocards}
+                cards={this.filterVideos('valentines')}
+                {...props} />} />
+              <Route path="/videocards/easter" render={(props) => <Cards
+                submit={this.handleSubmit}
+                inventory={this.state.videocards}
+                cards={this.filterVideos('easter')}
+                {...props} />} />
+              <Route path="/videocards/get_well" render={(props) => <Cards
+                submit={this.handleSubmit}
+                inventory={this.state.videocards}
+                cards={this.filterVideos('get_well')}
+                {...props} />} />
+              <Route path="/videocards/anniversary" render={(props) => <Cards
+                submit={this.handleSubmit}
+                inventory={this.state.videocards}
+                cards={this.filterVideos('anniversary')}
+                {...props} />} />
+              <Route path="/videocards/wedding" render={(props) => <Cards
+                submit={this.handleSubmit}
+                inventory={this.state.videocards}
+                cards={this.filterVideos('wedding')}
                 {...props} />} />
               <Route path="/createdCards/find/:id" render={(props) => <SentCards
                 sentCards={this.state.createdCards}{...props} />} />
