@@ -78,7 +78,7 @@ class App extends Component {
       <div className="container-fluid">
         <h1 className="title">Evelyn's E-Cards</h1>
         <div className="navBar">
-          <button className="btn homeButton"> <Link className="navLinks" to="/">Home</Link></button>
+          <button className="btn homeButton"> <Link className="navLinks" id='hello' to="/">Home</Link></button>
         </div>
        <article>
         <aside className="menuDiv">
@@ -90,10 +90,9 @@ class App extends Component {
               <li><button className="listButton"> <Link className="menuLinks" to="/cards/get_well">Get Well</Link></button></li>
               <li><button className="listButton"> <Link className="menuLinks" to="/cards/anniversary">Anniversary</Link></button></li>
               <li><button className="listButton"> <Link className="menuLinks" to="/cards/wedding">Wedding</Link></button></li>
-            </ul>
-            </aside>
-            <section className="secdiv divRow">
-          
+            </ul>     
+          </aside>
+          <section className="divRow secDiv">
             <Switch>
               <Route path="/" exact render={(props) => <Home
                 submit={this.handleSubmit}
@@ -142,10 +141,9 @@ class App extends Component {
             </section>
          
         </article>
+        <div></div>
       </div>
     );
   }
 }
-
 export default App;
-
