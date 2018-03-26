@@ -16,8 +16,8 @@ class Cards extends Component {
                         return <div>
                               {this.props.cards.map((item, i) =>{
                            
-                                    return (<div className="row divRow">
-                                          <div className="col-4 ">                                               
+                                    return (<div>
+                                          <div className="col-lg-4 col-sm-12 ">                                               
                                                 <img className="cards img-responsive" src={item.source} />
                                                 <Link to={match.url + '/' + item.id}><p className="name">{item.name}</p>
                                                 </Link>

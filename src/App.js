@@ -91,7 +91,7 @@ class App extends Component {
               <li><button className="listButton"> <Link className="menuLinks" to="/cards/anniversary">Anniversary</Link></button></li>
               <li><button className="listButton"> <Link className="menuLinks" to="/cards/wedding">Wedding</Link></button></li>
             </ul>
-            <div className=" col-lg-10 col-sm-12 ">
+           
           
             <Switch>
               <Route path="/" exact render={(props) => <Home
@@ -138,7 +138,7 @@ class App extends Component {
               <Route path="/createdCards/find/:id" render={(props) => <SentCards
                 sentCards={this.state.createdCards}{...props} />} />
             </Switch>
-            </div>
+           
           </div>
         </div>
       </div>
