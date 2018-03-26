@@ -81,7 +81,7 @@ class App extends Component {
           <button className="btn homeButton"> <Link className="navLinks" to="/">Home</Link></button>
         </div>
        <div className="row">
-        <div className=" col-lg-2 col-sm-12">
+        <div className=" col-lg-2 col-sm-12 divrow">
             <ul className='listItems'>
               <li><button className="listButton"> <Link className="menuLinks" to="/cards/birthday">Birthday</Link></button></li>
               <li><button className="listButton"> <Link className="menuLinks" to="/cards/christmas">Christmas</Link></button></li>
