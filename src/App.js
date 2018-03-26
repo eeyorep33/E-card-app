@@ -74,14 +74,14 @@ class App extends Component {
     e.target.message.value = ''
   }
   render() {
-    return (
+        return (
       <div className="container-fluid">
         <h1 className="title">Evelyn's E-Cards</h1>
         <div className="navBar">
           <button className="btn homeButton"> <Link className="navLinks" to="/">Home</Link></button>
         </div>
-        <article>
-          <aside className="menuDiv">
+       <div className="row">
+        <div className=" col-lg-2 col-sm-12">
             <ul className='listItems'>
               <li><button className="listButton"> <Link className="menuLinks" to="/cards/birthday">Birthday</Link></button></li>
               <li><button className="listButton"> <Link className="menuLinks" to="/cards/christmas">Christmas</Link></button></li>
@@ -91,8 +91,8 @@ class App extends Component {
               <li><button className="listButton"> <Link className="menuLinks" to="/cards/anniversary">Anniversary</Link></button></li>
               <li><button className="listButton"> <Link className="menuLinks" to="/cards/wedding">Wedding</Link></button></li>
             </ul>
-          </aside>
-          <section className="divRow secDiv">
+            <div className=" col-lg-10 col-sm-12 ">
+          
             <Switch>
               <Route path="/" exact render={(props) => <Home
                 submit={this.handleSubmit}
@@ -138,8 +138,9 @@ class App extends Component {
               <Route path="/createdCards/find/:id" render={(props) => <SentCards
                 sentCards={this.state.createdCards}{...props} />} />
             </Switch>
-          </section>
-        </article>
+            </div>
+          </div>
+        </div>
       </div>
     );
   }
