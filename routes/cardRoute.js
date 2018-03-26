@@ -7,4 +7,9 @@ module.exports = (app) => {
       app.get('/cards', (req, res) => {
             cards.getCards().then((cards) => { res.send(cards) })
       })
+
+      app.get('/animatedcards', (req,res)=>{
+            cards.getAllCards().then((cards)=>{res.send(cards)})
+      })
+
 } 

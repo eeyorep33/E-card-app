@@ -5,6 +5,7 @@ import axios from 'axios'
 import Cards from './components/cards_page'
 import Home from './components/Home'
 import SentCards from './components/sentCards'
+import VideoHome from './components/videoHome'
 
 class App extends Component {
   constructor() {
@@ -12,7 +13,8 @@ class App extends Component {
     this.state = {
       card_items: [],
       username: "",
-      email: ""
+      email: "",
+      videocards:[]
     }
   }
   componentWillMount() {
@@ -28,7 +30,19 @@ class App extends Component {
       .catch((error) => {
         console.log(error)
       })
+      axios.get('/animatedcards')
+      .then(res => {
+                this.setState({
+          card_items: res.data
+        })
+      })
+      .catch((error) => {
+        console.log(error)
+      })
+
+
   }
+  
   createUser = (e) => {
     e.preventDefault()
     let user = e.target.username.value;
@@ -95,6 +109,12 @@ class App extends Component {
           <section className="divRow secDiv">
             <Switch>
               <Route path="/" exact render={(props) => <Home
+                submit={this.handleSubmit}
+                createUser={this.createUser}
+                username={this.state.username}
+                inventory={this.state.card_items}
+                {...props} />} />}
+                <Route path="/videohome"  render={(props) => <VideoHome
                 submit={this.handleSubmit}
                 createUser={this.createUser}
                 username={this.state.username}
