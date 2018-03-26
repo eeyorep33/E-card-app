@@ -18,7 +18,7 @@ class VideoCards extends Component {
                            
                                     return (<div className="row divRow">
                                           <div className="col-4 ">                                               
-                                                <video className="cards img-responsive" src={item.source}></video>
+                                                <video  src={item.source}></video>
                                                 <Link to={match.url + '/' + item.id}><p className="name">{item.name}</p>
                                                 </Link>
                                           </div>
