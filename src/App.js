@@ -165,37 +165,37 @@ class App extends Component {
                 inventory={this.state.card_items}
                 cards={this.filterItems('wedding')}
                 {...props} />} />
-                <Route path="/videocards/birthday" render={(props) => <Cards
+                <Route path="/videocards/birthday" render={(props) => <VideoCards
                 submit={this.handleSubmit}
                 inventory={this.state.videocards}
                 cards={this.filterVideos('birthday')}
                 {...props} />} />
-              <Route path="/videocards/christmas" render={(props) => <Cards
+              <Route path="/videocards/christmas" render={(props) => <VideoCards
                 submit={this.handleSubmit}
                 inventory={this.state.videocards}
                 cards={this.filterVideos('christmas')}
                 {...props} />} />
-              <Route path="/videocards/valentines" render={(props) => <Cards
+              <Route path="/videocards/valentines" render={(props) => <VideoCards
                 submit={this.handleSubmit}
                 inventory={this.state.videocards}
                 cards={this.filterVideos('valentines')}
                 {...props} />} />
-              <Route path="/videocards/easter" render={(props) => <Cards
+              <Route path="/videocards/easter" render={(props) => <VideoCards
                 submit={this.handleSubmit}
                 inventory={this.state.videocards}
                 cards={this.filterVideos('easter')}
                 {...props} />} />
-              <Route path="/videocards/get_well" render={(props) => <Cards
+              <Route path="/videocards/get_well" render={(props) => <VideoCards
                 submit={this.handleSubmit}
                 inventory={this.state.videocards}
                 cards={this.filterVideos('get_well')}
                 {...props} />} />
-              <Route path="/videocards/anniversary" render={(props) => <Cards
+              <Route path="/videocards/anniversary" render={(props) => <VideoCards
                 submit={this.handleSubmit}
                 inventory={this.state.videocards}
                 cards={this.filterVideos('anniversary')}
                 {...props} />} />
-              <Route path="/videocards/wedding" render={(props) => <Cards
+              <Route path="/videocards/wedding" render={(props) => <VideoCards
                 submit={this.handleSubmit}
                 inventory={this.state.videocards}
                 cards={this.filterVideos('wedding')}
