@@ -80,8 +80,8 @@ class App extends Component {
         <div className="navBar">
           <button className="btn homeButton"> <Link className="navLinks" to="/">Home</Link></button>
         </div>
-       <div className="row">
-        <div className=" col-lg-2 col-sm-12 divrow">
+       <article>
+        <aside className="menuDiv divRow">
             <ul className='listItems'>
               <li><button className="listButton"> <Link className="menuLinks" to="/cards/birthday">Birthday</Link></button></li>
               <li><button className="listButton"> <Link className="menuLinks" to="/cards/christmas">Christmas</Link></button></li>
@@ -91,7 +91,8 @@ class App extends Component {
               <li><button className="listButton"> <Link className="menuLinks" to="/cards/anniversary">Anniversary</Link></button></li>
               <li><button className="listButton"> <Link className="menuLinks" to="/cards/wedding">Wedding</Link></button></li>
             </ul>
-           
+            </aside>
+            <section className="secdiv divRow">
           
             <Switch>
               <Route path="/" exact render={(props) => <Home
@@ -138,9 +139,9 @@ class App extends Component {
               <Route path="/createdCards/find/:id" render={(props) => <SentCards
                 sentCards={this.state.createdCards}{...props} />} />
             </Switch>
-           
-          </div>
-        </div>
+            </section>
+         
+        </article>
       </div>
     );
   }
