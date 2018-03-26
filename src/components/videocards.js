@@ -2,10 +2,12 @@ import React, { Component } from 'react';
 import { Link, Switch, Route } from 'react-router-dom'
 import Details from './details'
 class VideoCards extends Component {
+     
       render() {
             const { match, location } = this.props
             const cards_page = (path) => {
-                  if (path === '/cards/easter'
+                  console.log(this.props.cards)
+                  if (path === '/videocards/easter'
                         || path === '/videocards/birthday'
                         || path === '/videocards/anniversary'
                         || path === '/videocards/get_well'
@@ -18,7 +20,8 @@ class VideoCards extends Component {
                            
                                     return (<div className="row divRow">
                                           <div className="col-4 ">                                               
-                                                <video  src={item.source}></video>
+                                                <video  controls ref={(video) => { this.videoPlay = video }} src={item.source}></video>
+                                                <button onClick={()=>this.play()}>Play</button>
                                                 <Link to={match.url + '/' + item.id}><p className="name">{item.name}</p>
                                                 </Link>
                                           </div>
