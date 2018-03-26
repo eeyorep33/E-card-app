@@ -5,7 +5,8 @@ class VideoCards extends Component {
       render() {
             const { match, location } = this.props
             const cards_page = (path) => {
-                  if (path === '/cards/easter'
+                  console.log(this.props.cards)
+                  if (path === '/videocards/easter'
                         || path === '/videocards/birthday'
                         || path === '/videocards/anniversary'
                         || path === '/videocards/get_well'
