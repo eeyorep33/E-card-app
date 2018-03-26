@@ -36,6 +36,7 @@ class App extends Component {
                 this.setState({
           videocards: res.data
         })
+        console.log(this.state.videocards)
       })
       .catch((error) => {
         console.log(error)
