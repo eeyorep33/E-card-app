@@ -11,7 +11,7 @@ class Details extends Component {
             }
             
             else{return    <img className="imgDetails" src={this.props.cards[index].source} />}
-                   
+             console.log(this.videoPlay)      
            
       }
       render() {
