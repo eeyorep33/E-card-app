@@ -13,7 +13,7 @@ class SentCards extends Component {
             axios.get('/createdCards/' + id)
                   .then(res => {
                         this.setState({ sentCard: res.data, loaded:true })
-                        console.log(res.data)
+                       
                   })
                   .catch((error) => {
                         console.log(error)
@@ -35,7 +35,7 @@ class SentCards extends Component {
       render() {
             const { match, location } = this.props
             let param = parseInt(this.props.match.params.id)
-            this.findCard(param)
+            if(this.state.loaded===false){this.findCard(param)}
             return (
                   <div className="vidContainer">
                        {this.state.loaded && this.renderCard()}
