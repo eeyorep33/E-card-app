@@ -47,7 +47,7 @@ class App extends Component {
     //        let currentVid=this.state.videocards.find((el)=>{
     // return el.id===id
     //     }) 
-    () => { ref.play() }
+    ref.play() 
     //this.setState({current:currentVid}, ()=>{ref.play()})      
 
   }
@@ -106,7 +106,6 @@ class App extends Component {
         <h1 className="title">Evelyn's E-Cards</h1>
         <div className="navBar">
           <button className="btn homeButton"> <Link className="navLinks" to="/">Home</Link></button>
-          <button className="btn homeButton"> <Link className="navLinks" to="/videohome">Video</Link></button>
         </div>
         <article>
           <aside className="menuDiv">
