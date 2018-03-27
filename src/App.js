@@ -16,7 +16,7 @@ class App extends Component {
       username: "",
       email: "",
       videocards:[],
-     current:''
+     current:{}
     }
   }
   componentWillMount() {
@@ -45,10 +45,12 @@ class App extends Component {
 
 
   }
-  play = (id) => {    
+  play = (id) => {   
+    console.log(id) 
     let currentVid=this.state.videocards.find((el)=>{
 return el.id===id
     }) 
+    console.log(currentVid)
     this.setState({current:currentVid}, ()=>{this.videoPlay.play()})      
    
 }
