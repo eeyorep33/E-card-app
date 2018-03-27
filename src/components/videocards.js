@@ -19,7 +19,7 @@ class VideoCards extends Component {
                         || path === '/videocards/christmas'
                         || path === '/videocards/easter') {
                         return <div className="row">
-                              {this.props.cards.map((item, i) => {
+                              {this.props.videos.map((item, i) => {
 
                                     return (
                                           <div className="col-4 vidContainer">
@@ -37,7 +37,7 @@ class VideoCards extends Component {
                   <div>
                         {cards_page(location.pathname)}
                         <Switch>
-                              <Route path={match.url + '/:id'} render={(props) => <Details submit={this.props.submit} cards={this.props.cards}{...props} />} />
+                              <Route path={match.url + '/:id'} render={(props) => <Details submit={this.props.submit} cards={this.props.videos}{...props} />} />
                         </Switch>
                   </div>
             )
