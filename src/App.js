@@ -79,19 +79,24 @@ return el.id===id
     })
     return cardList
   }
-  handleSubmit = (e, index) => {   
+  handleSubmit = (e, index, source) => {   
     e.preventDefault()
     let sendername = e.target.senderName.value
     let senderemail = e.target.senderEmail.value
     let recipientname = e.target.recipientName.value
     let recipientemail = e.target.recipientEmail.value
-    let source = this.state.card_items.filter((el) => {
-      return el.id === index
-    })[0]    
+    let ending=source.substr(source.length-3, 3)
+    // if(ending==="mp4"){
+
+
+    // }
+    // let source = this.state.card_items.filter((el) => {
+    //   return el.id === index
+    // })[0]    
     let message = e.target.message.value
     let newCard = {
       senderName: sendername, senderEmail: senderemail,
-      recipientName: recipientname, recipientEmail: recipientemail, source: source.source, message: message
+      recipientName: recipientname, recipientEmail: recipientemail, source: source, message: message
     }
         axios.post('/createdCards', newCard)
       .then((res) => {
