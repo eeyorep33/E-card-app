@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import { Link, Switch, Route } from 'react-router-dom'
 import Details from './details'
 class VideoCards extends Component {
+      play = () => {
+            this.videoPlay.play()}
+           
      
       render() {
             const { match, location } = this.props
@@ -20,7 +23,7 @@ class VideoCards extends Component {
                            
                                     return (<div className="row divRow">
                                           <div className="col-4 ">                                               
-                                                <video  controls ref={(video) => { this.videoPlay = video }} src={item.source}></video>
+                                                <video  className="vid"controls ref={(video) => { this.videoPlay = video }} src={item.source}></video>
                                                 <button onClick={()=>this.play()}>Play</button>
                                                 <Link to={match.url + '/' + item.id}><p className="name">{item.name}</p>
                                                 </Link>

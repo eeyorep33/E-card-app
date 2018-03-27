@@ -5,7 +5,7 @@ import axios from 'axios'
 import Cards from './components/cards_page'
 import Home from './components/Home'
 import SentCards from './components/sentCards'
-import VideoHome from './components/videoHome'
+
 import VideoCards from './components/videocards'
 
 class App extends Component {
@@ -114,7 +114,18 @@ class App extends Component {
               <li><button className="listButton"> <Link className="menuLinks" to="/cards/get_well">Get Well</Link></button></li>
               <li><button className="listButton"> <Link className="menuLinks" to="/cards/anniversary">Anniversary</Link></button></li>
               <li><button className="listButton"> <Link className="menuLinks" to="/cards/wedding">Wedding</Link></button></li>
-            </ul>     
+            </ul>  
+            <p>Video Cards</p> 
+            <div></div>
+            <ul className="listItems">
+              <li><button className="listButton"> <Link className="menuLinks" to="/videocards/birthday">Birthday</Link></button></li>
+              <li><button className="listButton"> <Link className="menuLinks" to="/videocards/christmas">Christmas</Link></button></li>
+              <li><button className="listButton"> <Link className="menuLinks" to="/videocards/valentines">Valentines</Link></button></li>
+              <li><button className="listButton"> <Link className="menuLinks" to="/videocards/easter">Easter</Link></button></li>
+              <li><button className="listButton"> <Link className="menuLinks" to="/videocards/get_well">Get Well</Link></button></li>
+              <li><button className="listButton"> <Link className="menuLinks" to="/videocards/anniversary">Anniversary</Link></button></li>
+              <li><button className="listButton"> <Link className="menuLinks" to="/videocards/wedding">Wedding</Link></button></li>
+              </ul>  
           </aside>
           <section className="divRow secDiv">
             <Switch>
@@ -124,12 +135,7 @@ class App extends Component {
                 username={this.state.username}
                 inventory={this.state.card_items}
                 {...props} />} />}
-                <Route path="/videohome"  render={(props) => <VideoHome
-                submit={this.handleSubmit}
-                createUser={this.createUser}
-                username={this.state.username}
-                inventory={this.state.card_items}
-                {...props} />} />}
+                
               <Route path="/cards/birthday" render={(props) => <Cards
                 submit={this.handleSubmit}
                 inventory={this.state.card_items}
