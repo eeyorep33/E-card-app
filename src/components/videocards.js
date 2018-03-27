@@ -2,15 +2,18 @@ import React, { Component } from 'react';
 import { Link, Switch, Route } from 'react-router-dom'
 import Details from './details'
 class VideoCards extends Component {
-      play = () => {
-            console.log(this.props.cards.source)
-            this.videoPlay.play()}
-           
-     
+      play = (id) => {
+            let video = this.props.cards.find((el) => {
+                  return el.id === id
+                })
+            this.videoPlay.play(video)
+      }
+
+
       render() {
             const { match, location } = this.props
             const cards_page = (path) => {
-                 
+
                   if (path === '/videocards/easter'
                         || path === '/videocards/birthday'
                         || path === '/videocards/anniversary'
@@ -20,16 +23,17 @@ class VideoCards extends Component {
                         || path === '/videocards/christmas'
                         || path === '/videocards/easter') {
                         return <div className="row">
-                              {this.props.cards.map((item, i) =>{
-                           
+                              {this.props.cards.map((item, i) => {
+
                                     return (
-                                          <div className="col-4 vidContainer">                                               
-                                                <video  className="vid"controls ref={(video) => { this.videoPlay = video }} src={item.source}></video>
-                                                <button className="playButton"onClick={()=>this.play()}><i className="fas fa-play"></i></button>
+                                          <div className="col-4 vidContainer">
+                                                <video className="vid" controls ref={(video) => { this.videoPlay = video }} src={item.source}></video>
+                                                <button className="playButton" onClick={() => this.play(item.id)}><i className="fas fa-play"></i></button>
                                                 <Link to={match.url + '/' + item.id}><p className="name">{item.name}</p>
                                                 </Link>
                                           </div>
-                                   )})}
+                                    )
+                              })}
                         </div>
                   }
             }
