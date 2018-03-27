@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 class Details extends Component {
       findId = (i) => {
-            console.log(this.props.current)
+           
             let index = this.props.cards.findIndex((e) => { return e.id === i });
             let ending=this.props.cards[index].source.substr(this.props.cards[index].source.length-3,3)
                        if(ending==="mp4"){
-                  return <div><video  controls ref={(video) => { this.videoPlay = video }} src={this.props.current.source}></video>
+                  return <div><video  controls ref={(video) => { this.videoPlay = video }} src={this.props.cards[index].source}></video>
                   <button className="playButton" onClick={() => this.props.play(i)}><i className="fas fa-play"></i></button>
                   </div>
             }
