@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 class Details extends Component {
       findId = (i) => {
             let index = this.props.cards.findIndex((e) => { return e.id === i });
-            console.log(index)
+            
             return <div className="imgDiv" >
                   <img className="imgDetails" src={this.props.cards[index].source} />
                   <form onSubmit={(e) => this.props.submit(e, i)} className="labelDisplay">
@@ -23,7 +23,7 @@ class Details extends Component {
       render() {
             const { match, location } = this.props
             let param = parseInt(this.props.match.params.id)
-            console.log(param)
+            
             return (
                   <div> {this.findId(param)}</div>
             )

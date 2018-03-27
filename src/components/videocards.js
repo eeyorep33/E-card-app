@@ -2,14 +2,10 @@ import React, { Component } from 'react';
 import { Link, Switch, Route } from 'react-router-dom'
 import Details from './details'
 class VideoCards extends Component {
-      play = (id) => {
-            let video = this.props.cards.find((el) => {
-                  return el.id === id
-                })
-            this.videoPlay.play(video)
-      }
-
-
+     
+            
+      
+     
       render() {
             const { match, location } = this.props
             const cards_page = (path) => {
@@ -27,8 +23,8 @@ class VideoCards extends Component {
 
                                     return (
                                           <div className="col-4 vidContainer">
-                                                <video className="vid" controls ref={(video) => { this.videoPlay = video }} src={item.source}></video>
-                                                <button className="playButton" onClick={() => this.play(item.id)}><i className="fas fa-play"></i></button>
+                                                <video className="vid" controls ref={(video) => { this.videoPlay = video }} src={this.props.current}></video>
+                                                <button className="playButton" onClick={() => this.props.play(item.id)}><i className="fas fa-play"></i></button>
                                                 <Link to={match.url + '/' + item.id}><p className="name">{item.name}</p>
                                                 </Link>
                                           </div>
