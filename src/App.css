@@ -122,5 +122,5 @@
   font-size:25px
 }
 .vidContainer{position:relative}
-.playButton{border-radius:50%; width:50px; height:50px; background-color:#B9DDFF; position:absolute; top:76px;left:196px; display:none}
-.playButton:hover{display:block}
+.playButton{border-radius:50%; width:50px; height:50px; background-color:#B9DDFF; position:absolute; top:76px;left:196px}
+.playButton:hover{background-color:green}
