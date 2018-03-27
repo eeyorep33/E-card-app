@@ -30,7 +30,7 @@ app.listen(process.env.PORT || 8080, () => {
 card(app)
 createdCard(app, server)
 
- app.get('*', (req, res) => {
-     res.sendFile('index.html', { root: __dirname + './../build' })
- })
+app.get('*', (req, res) => {
+    res.sendFile('index.html', { root: __dirname + './../build' })
+})
 

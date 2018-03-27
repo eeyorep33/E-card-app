@@ -5,7 +5,6 @@ import axios from 'axios'
 import Cards from './components/cards_page'
 import Home from './components/Home'
 import SentCards from './components/sentCards'
-
 import VideoCards from './components/videocards'
 
 class App extends Component {
@@ -15,46 +14,44 @@ class App extends Component {
       card_items: [],
       username: "",
       email: "",
-      videocards:[],
-     current:{}
+      videocards: [],
+      //current:{}
     }
   }
   componentWillMount() {
-        let name = localStorage.getItem("username")
+    let name = localStorage.getItem("username")
     let email = localStorage.getItem("email")
-        this.setState({ username: name, email: email });
+    this.setState({ username: name, email: email });
     axios.get('/cards')
       .then(res => {
-                this.setState({
+        this.setState({
           card_items: res.data
         })
       })
       .catch((error) => {
         console.log(error)
       })
-      axios.get('/animatedcards')
+    axios.get('/animatedcards')
       .then(res => {
-                this.setState({
+        this.setState({
           videocards: res.data
         })
-        
+
       })
       .catch((error) => {
         console.log(error)
       })
+  }
+  play = (id, ref) => {
 
+    //        let currentVid=this.state.videocards.find((el)=>{
+    // return el.id===id
+    //     }) 
+    () => { ref.play() }
+    //this.setState({current:currentVid}, ()=>{ref.play()})      
 
   }
-  play = (id, ref) => {   
-    console.log(id)
-       let currentVid=this.state.videocards.find((el)=>{
-return el.id===id
-    }) 
-    console.log(ref)
-    this.setState({current:currentVid}, ()=>{ref.play()})      
-  
-}
-  
+
   createUser = (e) => {
     e.preventDefault()
     let user = e.target.username.value;
@@ -79,26 +76,18 @@ return el.id===id
     })
     return cardList
   }
-  handleSubmit = (e, index, source) => {   
+  handleSubmit = (e, index, source) => {
     e.preventDefault()
     let sendername = e.target.senderName.value
     let senderemail = e.target.senderEmail.value
     let recipientname = e.target.recipientName.value
     let recipientemail = e.target.recipientEmail.value
-    let ending=source.substr(source.length-3, 3)
-    // if(ending==="mp4"){
-
-
-    // }
-    // let source = this.state.card_items.filter((el) => {
-    //   return el.id === index
-    // })[0]    
     let message = e.target.message.value
     let newCard = {
       senderName: sendername, senderEmail: senderemail,
       recipientName: recipientname, recipientEmail: recipientemail, source: source, message: message
     }
-        axios.post('/createdCards', newCard)
+    axios.post('/createdCards', newCard)
       .then((res) => {
         this.setState({ createdCards: res.data })
       })
@@ -112,15 +101,15 @@ return el.id===id
     e.target.message.value = ''
   }
   render() {
-        return (
+    return (
       <div className="container-fluid">
         <h1 className="title">Evelyn's E-Cards</h1>
         <div className="navBar">
-          <button className="btn homeButton"> <Link className="navLinks"  to="/">Home</Link></button>
-          <button className="btn homeButton"> <Link className="navLinks"  to="/videohome">Video</Link></button>
+          <button className="btn homeButton"> <Link className="navLinks" to="/">Home</Link></button>
+          <button className="btn homeButton"> <Link className="navLinks" to="/videohome">Video</Link></button>
         </div>
-       <article>
-        <aside className="menuDiv">
+        <article>
+          <aside className="menuDiv">
             <ul className='listItems'>
               <li><button className="listButton"> <Link className="menuLinks" to="/cards/birthday">Birthday</Link></button></li>
               <li><button className="listButton"> <Link className="menuLinks" to="/cards/christmas">Christmas</Link></button></li>
@@ -129,8 +118,8 @@ return el.id===id
               <li><button className="listButton"> <Link className="menuLinks" to="/cards/get_well">Get Well</Link></button></li>
               <li><button className="listButton"> <Link className="menuLinks" to="/cards/anniversary">Anniversary</Link></button></li>
               <li><button className="listButton"> <Link className="menuLinks" to="/cards/wedding">Wedding</Link></button></li>
-            </ul>  
-            <p className="vidNav">Video Cards</p> 
+            </ul>
+            <p className="vidNav">Video Cards</p>
             <div></div>
             <ul className="listItems">
               <li><button className="listButton"> <Link className="menuLinks" to="/videocards/birthday">Birthday</Link></button></li>
@@ -140,7 +129,7 @@ return el.id===id
               <li><button className="listButton"> <Link className="menuLinks" to="/videocards/get_well">Get Well</Link></button></li>
               <li><button className="listButton"> <Link className="menuLinks" to="/videocards/anniversary">Anniversary</Link></button></li>
               <li><button className="listButton"> <Link className="menuLinks" to="/videocards/wedding">Wedding</Link></button></li>
-              </ul>  
+            </ul>
           </aside>
           <section className="divRow secDiv">
             <Switch>
@@ -150,7 +139,6 @@ return el.id===id
                 username={this.state.username}
                 inventory={this.state.card_items}
                 {...props} />} />}
-                
               <Route path="/cards/birthday" render={(props) => <Cards
                 submit={this.handleSubmit}
                 inventory={this.state.card_items}
@@ -186,7 +174,7 @@ return el.id===id
                 inventory={this.state.card_items}
                 cards={this.filterItems('wedding')}
                 {...props} />} />
-                <Route path="/videocards/birthday" render={(props) => <VideoCards
+              <Route path="/videocards/birthday" render={(props) => <VideoCards
                 play={this.play}
                 current={this.state.current}
                 submit={this.handleSubmit}
@@ -194,52 +182,51 @@ return el.id===id
                 videos={this.filterVideos('birthday')}
                 {...props} />} />
               <Route path="/videocards/christmas" render={(props) => <VideoCards
-              play={this.play}
-              current={this.state.current}
+                play={this.play}
+                current={this.state.current}
                 submit={this.handleSubmit}
                 inventory={this.state.videocards}
                 videos={this.filterVideos('christmas')}
                 {...props} />} />
               <Route path="/videocards/valentines" render={(props) => <VideoCards
-              play={this.play}
-              current={this.state.current}
+                play={this.play}
+                current={this.state.current}
                 submit={this.handleSubmit}
                 inventory={this.state.videocards}
                 videos={this.filterVideos('valentines')}
                 {...props} />} />
               <Route path="/videocards/easter" render={(props) => <VideoCards
-              play={this.play}
-              current={this.state.current}
+                play={this.play}
+                current={this.state.current}
                 submit={this.handleSubmit}
                 inventory={this.state.videocards}
                 videos={this.filterVideos('easter')}
                 {...props} />} />
               <Route path="/videocards/get_well" render={(props) => <VideoCards
-              play={this.play}
-              current={this.state.current}
+                play={this.play}
+                current={this.state.current}
                 submit={this.handleSubmit}
                 inventory={this.state.videocards}
                 videos={this.filterVideos('get_well')}
                 {...props} />} />
               <Route path="/videocards/anniversary" render={(props) => <VideoCards
-              play={this.play}
-              current={this.state.current}
+                play={this.play}
+                current={this.state.current}
                 submit={this.handleSubmit}
                 inventory={this.state.videocards}
                 videos={this.filterVideos('anniversary')}
                 {...props} />} />
               <Route path="/videocards/wedding" render={(props) => <VideoCards
-              play={this.play}
-              current={this.state.current}
+                play={this.play}
+                current={this.state.current}
                 submit={this.handleSubmit}
                 inventory={this.state.videocards}
                 videos={this.filterVideos('wedding')}
                 {...props} />} />
               <Route path="/createdCards/find/:id" render={(props) => <SentCards
-                sentCards={this.state.createdCards}play={this.play}{...props} />} />
+                sentCards={this.state.createdCards} play={this.play}{...props} />} />
             </Switch>
-            </section>
-         
+          </section>
         </article>
         <div></div>
       </div>
