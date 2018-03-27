@@ -3,13 +3,14 @@ import { Link, Switch, Route } from 'react-router-dom'
 import Details from './details'
 class VideoCards extends Component {
       play = () => {
+            console.log(this.props.cards.source)
             this.videoPlay.play()}
            
      
       render() {
             const { match, location } = this.props
             const cards_page = (path) => {
-                  console.log(this.props.cards)
+                 
                   if (path === '/videocards/easter'
                         || path === '/videocards/birthday'
                         || path === '/videocards/anniversary'
