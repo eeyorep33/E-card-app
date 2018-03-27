@@ -18,17 +18,17 @@ class VideoCards extends Component {
                         || path === '/videocards/valentines'
                         || path === '/videocards/christmas'
                         || path === '/videocards/easter') {
-                        return <div>
+                        return <div className="row">
                               {this.props.cards.map((item, i) =>{
                            
-                                    return (<div className="row divRow">
-                                          <div className="col-4 ">                                               
+                                    return (
+                                          <div className="col-4 vidContainer">                                               
                                                 <video  className="vid"controls ref={(video) => { this.videoPlay = video }} src={item.source}></video>
                                                 <button onClick={()=>this.play()}>Play</button>
                                                 <Link to={match.url + '/' + item.id}><p className="name">{item.name}</p>
                                                 </Link>
                                           </div>
-                                    </div>)})}
+                                   )})}
                         </div>
                   }
             }

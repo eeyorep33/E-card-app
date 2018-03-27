@@ -115,10 +115,11 @@
   color:#DEA0FF;
   font-family:'Niconne', cursive}
 .featuredDiv{height:3px; background-color:#84FFCE; margin-bottom:20px}
-.vid{width:300px; height:auto}
+.vid{width:400px; height:auto}
 .vidNav{color:#DEA0FF;
   font-family:'Niconne', cursive;
   text-align:center; 
   font-size:25px
 }
+.vidContainer{position:relative}
 
