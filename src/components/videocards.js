@@ -26,7 +26,7 @@ class VideoCards extends Component {
                                     return (
                                           <div className="col-4 vidContainer">
                                                 <video className="vid" controls ref={`video${i}`} src={item.source}></video>
-                                                <button className="playButton" onClick={() => this.props.play(item.id, i)}><i className="fas fa-play"></i></button>
+                                                <button className="playButton" onClick={() => this.props.play(item.id, this.refs["video" + i])}><i className="fas fa-play"></i></button>
                                                 <Link to={match.url + '/' + item.id}><p className="name">{item.name}</p>
                                                 </Link>
                                           </div>

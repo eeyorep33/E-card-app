@@ -45,14 +45,14 @@ class App extends Component {
 
 
   }
-  play = (id, i) => {   
+  play = (id, ref) => {   
     console.log(id)
     debugger 
     let currentVid=this.state.videocards.find((el)=>{
 return el.id===id
     }) 
     console.log(currentVid)
-    this.setState({current:currentVid}, ()=>{this.refs["video" + i].play()})      
+    this.setState({current:currentVid}, ()=>{ref.play()})      
    console.log(this.state.current)
 }
   
