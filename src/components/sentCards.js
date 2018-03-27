@@ -22,7 +22,7 @@ class SentCards extends Component {
             renderCard=()=>{
                   let ending = this.state.sentCard.source.substr(this.state.sentCard.source.length - 3, 3)
             if (ending === "mp4") {
-                  return<div className="vidContainer"><video className="" ref={`specVideo`} src={this.state.sentCard.source}></video>
+                  return<div className="vidContainer"><video className="displayVid" ref={`specVideo`} src={this.state.sentCard.source}></video>
                   <button className="playButton" onClick={() => this.props.play(null,this.refs.specVideo)}><i className="fas fa-play"></i></button>
                   </div>
             }
