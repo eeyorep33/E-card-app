@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 class Details extends Component {
       findId = (i) => {
+            console.log(this.props.current)
             let index = this.props.cards.findIndex((e) => { return e.id === i });
             let ending=this.props.cards[index].source.substr(this.props.cards[index].source.length-3,3)
                        if(ending==="mp4"){
