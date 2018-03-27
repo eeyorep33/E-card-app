@@ -4,8 +4,9 @@ class Details extends Component {
             let index = this.props.cards.findIndex((e) => { return e.id === i });
             let ending=this.props.cards[index].source.substr(this.props.cards[index].source.length-3,3)
                        if(ending==="mp4"){
-                  return <video controls src={this.props.cards[index].source}></video>
-                
+                  return <div><video  controls ref={(video) => { this.videoPlay = video }} src={this.props.current.source}></video>
+                  <button className="playButton" onClick={() => this.props.play(item.id)}><i className="fas fa-play"></i></button>
+                  </div>
             }
             
             else{return    <img className="imgDetails" src={this.props.cards[index].source} />}

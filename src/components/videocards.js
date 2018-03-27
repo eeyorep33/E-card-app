@@ -37,7 +37,7 @@ class VideoCards extends Component {
                   <div>
                         {cards_page(location.pathname)}
                         <Switch>
-                              <Route path={match.url + '/:id'} render={(props) => <Details submit={this.props.submit} cards={this.props.videos}{...props} />} />
+                              <Route path={match.url + '/:id'} render={(props) => <Details submit={this.props.submit} current={this.props.current}cards={this.props.videos}{...props} />} />
                         </Switch>
                   </div>
             )
