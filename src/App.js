@@ -50,9 +50,9 @@ class App extends Component {
        let currentVid=this.state.videocards.find((el)=>{
 return el.id===id
     }) 
-    console.log(currentVid)
+    console.log(ref)
     this.setState({current:currentVid}, ()=>{ref.play()})      
-   console.log(this.state.current)
+  
 }
   
   createUser = (e) => {
@@ -231,7 +231,7 @@ return el.id===id
                 videos={this.filterVideos('wedding')}
                 {...props} />} />
               <Route path="/createdCards/find/:id" render={(props) => <SentCards
-                sentCards={this.state.createdCards}{...props} />} />
+                sentCards={this.state.createdCards}play={this.play}{...props} />} />
             </Switch>
             </section>
          
