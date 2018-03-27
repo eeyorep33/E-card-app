@@ -3,15 +3,12 @@ class Details extends Component {
       findId = (i) => {
             let index = this.props.cards.findIndex((e) => { return e.id === i });
             let ending=this.props.cards[index].source.substr(this.props.cards[index].source.length-3,3)
-            console.log(ending)
-            if(ending==="mp4"){
-                  return 
-                        <video controls src={this.props.cards[index].source}></video>
+                       if(ending==="mp4"){
+                  return <video controls src={this.props.cards[index].source}></video>
                 
             }
             
-            else{return 
-                  <img className="imgDetails" src={this.props.cards[index].source} />}
+            else{return    <img className="imgDetails" src={this.props.cards[index].source} />}
                    
            
       }
@@ -20,7 +17,8 @@ class Details extends Component {
             let param = parseInt(this.props.match.params.id)
             
             return (
-                  <div className="imgDiv"> {this.findId(param)}
+                  <div className="imgDiv"> 
+                  {this.findId(param)}
                   <form onSubmit={(e) => this.props.submit(e, param)} className="labelDisplay">
                  <label>Sender's Name</label>
                  <input className="inputDisplay" name="senderName" type="text" />
