@@ -46,7 +46,8 @@ class App extends Component {
 
   }
   play = (id, i) => {   
-    console.log(id) 
+    console.log(id)
+    debugger 
     let currentVid=this.state.videocards.find((el)=>{
 return el.id===id
     }) 
