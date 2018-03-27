@@ -3,7 +3,9 @@ import { Link, Switch, Route } from 'react-router-dom'
 import Details from './details'
 class VideoCards extends Component {
      
-            
+      componentDidMount(){
+            console.log(this.props)
+      }
       
      
       render() {
@@ -23,7 +25,7 @@ class VideoCards extends Component {
 
                                     return (
                                           <div className="col-4 vidContainer">
-                                                <video className="vid" controls ref={"video" + i } src={item.source}></video>
+                                                <video className="vid" controls ref={`video${i}`} src={item.source}></video>
                                                 <button className="playButton" onClick={() => this.props.play(item.id, i)}><i className="fas fa-play"></i></button>
                                                 <Link to={match.url + '/' + item.id}><p className="name">{item.name}</p>
                                                 </Link>
