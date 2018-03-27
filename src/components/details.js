@@ -5,7 +5,7 @@ class Details extends Component {
             let ending=this.props.cards[index].source.substr(this.props.cards[index].source.length-3,3)
                        if(ending==="mp4"){
                   return <div><video  controls ref={(video) => { this.videoPlay = video }} src={this.props.current.source}></video>
-                  <button className="playButton" onClick={() => this.props.play(item.id)}><i className="fas fa-play"></i></button>
+                  <button className="playButton" onClick={() => this.props.play(i)}><i className="fas fa-play"></i></button>
                   </div>
             }
             
