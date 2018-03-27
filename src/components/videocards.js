@@ -24,7 +24,7 @@ class VideoCards extends Component {
                                     return (
                                           <div className="col-4 vidContainer">                                               
                                                 <video  className="vid"controls ref={(video) => { this.videoPlay = video }} src={item.source}></video>
-                                                <button onClick={()=>this.play()}>Play</button>
+                                                <button onClick={()=>this.play()}><i className="fas fa-play"></i></button>
                                                 <Link to={match.url + '/' + item.id}><p className="name">{item.name}</p>
                                                 </Link>
                                           </div>

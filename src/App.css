@@ -122,4 +122,5 @@
   font-size:25px
 }
 .vidContainer{position:relative}
+.playButton{border-radius:50%; background-color:#B9DDFF; position:absolute; top:150px;left:205px}
 
