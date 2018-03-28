@@ -15,7 +15,7 @@ class App extends Component {
       username: "",
       email: "",
       videocards: [],
-      status:false
+      status: false
     }
   }
   componentWillMount() {
@@ -43,17 +43,13 @@ class App extends Component {
       })
   }
   play = (id, ref) => {
-if(this.state.status===false){
-  this.setState({status:true}, ()=>{ref.play()}) 
-}
-else if(this.state.status===true){
-  this.setState({status:false}, ()=>{ref.pause()})
-}
-   
-       
-
+    if (this.state.status === false) {
+      this.setState({ status: true }, () => { ref.play() })
+    }
+    else if (this.state.status === true) {
+      this.setState({ status: false }, () => { ref.pause() })
+    }
   }
-
   createUser = (e) => {
     e.preventDefault()
     let user = e.target.username.value;
@@ -176,48 +172,50 @@ else if(this.state.status===true){
                 cards={this.filterItems('wedding')}
                 {...props} />} />
               <Route path="/videocards/birthday" render={(props) => <VideoCards
+                status={this.state.status}
                 play={this.play}
-                current={this.state.current}
                 submit={this.handleSubmit}
                 inventory={this.state.videocards}
                 videos={this.filterVideos('birthday')}
                 {...props} />} />
               <Route path="/videocards/christmas" render={(props) => <VideoCards
+                status={this.state.status}
                 play={this.play}
-                current={this.state.current}
                 submit={this.handleSubmit}
                 inventory={this.state.videocards}
                 videos={this.filterVideos('christmas')}
                 {...props} />} />
               <Route path="/videocards/valentines" render={(props) => <VideoCards
+                status={this.state.status}
                 play={this.play}
-                current={this.state.current}
                 submit={this.handleSubmit}
                 inventory={this.state.videocards}
                 videos={this.filterVideos('valentines')}
                 {...props} />} />
               <Route path="/videocards/easter" render={(props) => <VideoCards
+                status={this.state.status}
                 play={this.play}
-                current={this.state.current}
                 submit={this.handleSubmit}
                 inventory={this.state.videocards}
                 videos={this.filterVideos('easter')}
                 {...props} />} />
               <Route path="/videocards/get_well" render={(props) => <VideoCards
+                status={this.state.status}
                 play={this.play}
-                current={this.state.current}
                 submit={this.handleSubmit}
                 inventory={this.state.videocards}
                 videos={this.filterVideos('get_well')}
                 {...props} />} />
               <Route path="/videocards/anniversary" render={(props) => <VideoCards
+                status={this.state.status}
                 play={this.play}
-                current={this.state.current}
+
                 submit={this.handleSubmit}
                 inventory={this.state.videocards}
                 videos={this.filterVideos('anniversary')}
                 {...props} />} />
               <Route path="/videocards/wedding" render={(props) => <VideoCards
+                status={this.state.status}
                 play={this.play}
                 current={this.state.current}
                 submit={this.handleSubmit}
@@ -225,7 +223,9 @@ else if(this.state.status===true){
                 videos={this.filterVideos('wedding')}
                 {...props} />} />
               <Route path="/createdCards/find/:id" render={(props) => <SentCards
-                sentCards={this.state.createdCards} play={this.play}{...props} />} />
+                status={this.state.status}
+                sentCards={this.state.createdCards} 
+                play={this.play}{...props} />} />
             </Switch>
           </section>
         </article>
