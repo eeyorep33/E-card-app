@@ -44,7 +44,7 @@ class App extends Component {
   }
   play = (id, ref) => {
     if (this.state.status === "paused") {
-      this.setState({ status:"play" }, () => { ref.play() })
+      this.setState({ status: "play" }, () => { ref.play() })
     }
     else if (this.state.status === "play") {
       this.setState({ status: "paused" }, () => { ref.pause() })
@@ -137,121 +137,121 @@ class App extends Component {
                 inventory={this.state.card_items}
                 {...props} />} />}
               <Route path="/cards/birthday" render={(props) => (
-              !this.state.username ? (
-              <Redirect to="/" exact />):(<Cards
-                submit={this.handleSubmit}
-                inventory={this.state.card_items}
-                cards={this.filterItems('birthday')}
-              {...props} />))} />
+                !this.state.username ? (
+                  <Redirect to="/" exact />) : (<Cards
+                    submit={this.handleSubmit}
+                    inventory={this.state.card_items}
+                    cards={this.filterItems('birthday')}
+                    {...props} />))} />
               <Route path="/cards/christmas" render={(props) => (
-              !this.state.username ? (
-              <Redirect to="/" exact />):(<Cards
-                submit={this.handleSubmit}
-                inventory={this.state.card_items}
-                cards={this.filterItems('christmas')}
-              {...props} />))} />
+                !this.state.username ? (
+                  <Redirect to="/" exact />) : (<Cards
+                    submit={this.handleSubmit}
+                    inventory={this.state.card_items}
+                    cards={this.filterItems('christmas')}
+                    {...props} />))} />
               <Route path="/cards/valentines" render={(props) => (
-              !this.state.username ? (
-              <Redirect to="/" exact />):(<Cards
-                submit={this.handleSubmit}
-                inventory={this.state.card_items}
-                cards={this.filterItems('valentines')}
-              {...props} />))} />
+                !this.state.username ? (
+                  <Redirect to="/" exact />) : (<Cards
+                    submit={this.handleSubmit}
+                    inventory={this.state.card_items}
+                    cards={this.filterItems('valentines')}
+                    {...props} />))} />
               <Route path="/cards/easter" render={(props) => (
-              !this.state.username ? (
-              <Redirect to="/" exact />):(<Cards
-                submit={this.handleSubmit}
-                inventory={this.state.card_items}
-                cards={this.filterItems('easter')}
-              {...props} />))} />
+                !this.state.username ? (
+                  <Redirect to="/" exact />) : (<Cards
+                    submit={this.handleSubmit}
+                    inventory={this.state.card_items}
+                    cards={this.filterItems('easter')}
+                    {...props} />))} />
               <Route path="/cards/get_well" render={(props) => (
-              !this.state.username ? (
-              <Redirect to="/" exact />):(<Cards
-                submit={this.handleSubmit}
-                inventory={this.state.card_items}
-                cards={this.filterItems('get_well')}
-              {...props} />))} />
+                !this.state.username ? (
+                  <Redirect to="/" exact />) : (<Cards
+                    submit={this.handleSubmit}
+                    inventory={this.state.card_items}
+                    cards={this.filterItems('get_well')}
+                    {...props} />))} />
               <Route path="/cards/anniversary" render={(props) => (
-              !this.state.username ? (
-              <Redirect to="/" exact />):(<Cards
-                submit={this.handleSubmit}
-                inventory={this.state.card_items}
-                cards={this.filterItems('anniversary')}
-              {...props} />))} />
+                !this.state.username ? (
+                  <Redirect to="/" exact />) : (<Cards
+                    submit={this.handleSubmit}
+                    inventory={this.state.card_items}
+                    cards={this.filterItems('anniversary')}
+                    {...props} />))} />
               <Route path="/cards/wedding" render={(props) => (
-              !this.state.username ? (
-              <Redirect to="/" exact />):(<Cards
-                submit={this.handleSubmit}
-                inventory={this.state.card_items}
-                cards={this.filterItems('wedding')}
-              {...props} />))} />
+                !this.state.username ? (
+                  <Redirect to="/" exact />) : (<Cards
+                    submit={this.handleSubmit}
+                    inventory={this.state.card_items}
+                    cards={this.filterItems('wedding')}
+                    {...props} />))} />
               <Route path="/videocards/birthday" render={(props) => (
-              !this.state.username ? (
-              <Redirect to="/" exact />):(<VideoCards
-                status={this.state.status}
-                play={this.play}
-                submit={this.handleSubmit}
-                inventory={this.state.videocards}
-                videos={this.filterVideos('birthday')}
-              {...props} />))} />
+                !this.state.username ? (
+                  <Redirect to="/" exact />) : (<VideoCards
+                    status={this.state.status}
+                    play={this.play}
+                    submit={this.handleSubmit}
+                    inventory={this.state.videocards}
+                    videos={this.filterVideos('birthday')}
+                    {...props} />))} />
               <Route path="/videocards/christmas" render={(props) => (
-              !this.state.username ? (
-              <Redirect to="/" exact />):(<VideoCards
-                status={this.state.status}
-                play={this.play}
-                submit={this.handleSubmit}
-                inventory={this.state.videocards}
-                videos={this.filterVideos('christmas')}
-              {...props} />))} />
+                !this.state.username ? (
+                  <Redirect to="/" exact />) : (<VideoCards
+                    status={this.state.status}
+                    play={this.play}
+                    submit={this.handleSubmit}
+                    inventory={this.state.videocards}
+                    videos={this.filterVideos('christmas')}
+                    {...props} />))} />
               <Route path="/videocards/valentines" render={(props) => (
-              !this.state.username ? (
-              <Redirect to="/" exact />):(<VideoCards
-                status={this.state.status}
-                play={this.play}
-                submit={this.handleSubmit}
-                inventory={this.state.videocards}
-                videos={this.filterVideos('valentines')}
-              {...props} />))} />
-              <Route path="/videocards/easter" render={(props) =>(
-              !this.state.username ? (
-              <Redirect to="/" exact />):(<VideoCards
-                status={this.state.status}
-                play={this.play}
-                submit={this.handleSubmit}
-                inventory={this.state.videocards}
-                videos={this.filterVideos('easter')}
-              {...props} />))} />
+                !this.state.username ? (
+                  <Redirect to="/" exact />) : (<VideoCards
+                    status={this.state.status}
+                    play={this.play}
+                    submit={this.handleSubmit}
+                    inventory={this.state.videocards}
+                    videos={this.filterVideos('valentines')}
+                    {...props} />))} />
+              <Route path="/videocards/easter" render={(props) => (
+                !this.state.username ? (
+                  <Redirect to="/" exact />) : (<VideoCards
+                    status={this.state.status}
+                    play={this.play}
+                    submit={this.handleSubmit}
+                    inventory={this.state.videocards}
+                    videos={this.filterVideos('easter')}
+                    {...props} />))} />
               <Route path="/videocards/get_well" render={(props) => (
-              !this.state.username ? (
-              <Redirect to="/" exact />):(<VideoCards
-                status={this.state.status}
-                play={this.play}
-                submit={this.handleSubmit}
-                inventory={this.state.videocards}
-                videos={this.filterVideos('get_well')}
-              {...props} />))} />
+                !this.state.username ? (
+                  <Redirect to="/" exact />) : (<VideoCards
+                    status={this.state.status}
+                    play={this.play}
+                    submit={this.handleSubmit}
+                    inventory={this.state.videocards}
+                    videos={this.filterVideos('get_well')}
+                    {...props} />))} />
               <Route path="/videocards/anniversary" render={(props) => (
-              !this.state.username ? (
-              <Redirect to="/" exact />):(<VideoCards
-                status={this.state.status}
-                play={this.play}
-                submit={this.handleSubmit}
-                inventory={this.state.videocards}
-                videos={this.filterVideos('anniversary')}
-              {...props} />))} />
+                !this.state.username ? (
+                  <Redirect to="/" exact />) : (<VideoCards
+                    status={this.state.status}
+                    play={this.play}
+                    submit={this.handleSubmit}
+                    inventory={this.state.videocards}
+                    videos={this.filterVideos('anniversary')}
+                    {...props} />))} />
               <Route path="/videocards/wedding" render={(props) => (
-              !this.state.username ? (
-              <Redirect to="/" exact />):(<VideoCards
-                status={this.state.status}
-                play={this.play}
-                current={this.state.current}
-                submit={this.handleSubmit}
-                inventory={this.state.videocards}
-                videos={this.filterVideos('wedding')}
-              {...props} />))} />
+                !this.state.username ? (
+                  <Redirect to="/" exact />) : (<VideoCards
+                    status={this.state.status}
+                    play={this.play}
+                    current={this.state.current}
+                    submit={this.handleSubmit}
+                    inventory={this.state.videocards}
+                    videos={this.filterVideos('wedding')}
+                    {...props} />))} />
               <Route path="/createdCards/find/:id" render={(props) => <SentCards
                 status={this.state.status}
-                sentCards={this.state.createdCards} 
+                sentCards={this.state.createdCards}
                 play={this.play}{...props} />} />
             </Switch>
           </section>

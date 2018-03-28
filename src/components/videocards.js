@@ -19,11 +19,11 @@ class VideoCards extends Component {
                               {this.props.videos.map((item, i) => {
                                     return (
                                           <div className="col-4 vidContainer">
-                                                <video className="vid"  ref={`video${i}`} src={item.source}></video>
-                                                <button className={this.props.status==="play"?"playButton":"playButton hidden" }onClick={() => this.props.play(item.id, this.refs["video" + i])}>
-                                                <i className="fas fa-pause"></i></button>
-                                                <button className={this.props.status==="paused"?"playButton":"playButton hidden" } onClick={() => this.props.play(item.id, this.refs["video" + i])}>
-                                                <i className="fas fa-play"></i></button>
+                                                <video className="vid" ref={`video${i}`} src={item.source}></video>
+                                                <button className={this.props.status === "play" ? "playButton" : "playButton hidden"} onClick={() => this.props.play(item.id, this.refs["video" + i])}>
+                                                      <i className="fas fa-pause"></i></button>
+                                                <button className={this.props.status === "paused" ? "playButton" : "playButton hidden"} onClick={() => this.props.play(item.id, this.refs["video" + i])}>
+                                                      <i className="fas fa-play"></i></button>
                                                 <Link to={match.url + '/' + item.id}><p className="vidName">{item.name}</p>
                                                 </Link>
                                           </div>
