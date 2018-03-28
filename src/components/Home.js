@@ -4,13 +4,16 @@ import Cards from './cards_page';
 class Home extends Component {
       noUsername = (username, path) => {
             if (!username) {
-                  return <form onSubmit={this.props.createUser} className="labelDisplay">
+                  return <div>
+                        <h1 className="username">"Please Enter a user name and your E-mail to view our cards"</h1>
+                        <form onSubmit={this.props.createUser} className="labelDisplay">
                         <label>Username</label>
                         <input className="inputDisplay" type="text" name="username" />
                         <label>Email</label>
                         <input className="inputDisplay" type="email" name="email" />
                         <button className="btn submitButton" type="submit">Submit</button>
                   </form>
+                  </div>
             }
             else {
                   if (path === '/') {
