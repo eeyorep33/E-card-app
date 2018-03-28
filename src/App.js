@@ -117,7 +117,7 @@ class App extends Component {
               <li><button className="listButton"> <Link className="menuLinks" to="/cards/wedding">Wedding</Link></button></li>
             </ul>
             <p className="vidNav">Video Cards</p>
-            <div></div>
+            <div className="vidBar"></div>
             <ul className="listItems">
               <li><button className="listButton"> <Link className="menuLinks" to="/videocards/birthday">Birthday</Link></button></li>
               <li><button className="listButton"> <Link className="menuLinks" to="/videocards/christmas">Christmas</Link></button></li>

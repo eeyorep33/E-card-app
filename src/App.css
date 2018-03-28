@@ -167,3 +167,15 @@
   font-family: 'Niconne', cursive;
   font-size:20px;
    color:#DEA0FF}
+   .displayPause{
+    border-radius:50%; 
+    width:70px; 
+    height:70px; 
+    background-color:#B9DDFF;  
+    opacity:0.0; 
+    position:absolute;
+    top:140px; 
+    left:650px }
+  .displayPause:hover{
+    opacity:1}
+  .hidden{visibility:hidden}
