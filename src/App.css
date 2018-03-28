@@ -154,8 +154,8 @@ margin-bottom:0}
   background-color:#B9DDFF;  
   opacity:0.0; 
   position:absolute;
-  top:140px; 
-  left:650px }
+  top:50%; 
+  left:50% }
 .displayPlay:hover{
   opacity:1}
 .vidBar{
