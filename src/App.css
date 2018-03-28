@@ -19,8 +19,9 @@
 .name{
   min-width:8em;
   margin-left:200px;
-  font-family: 'Niconne', cursive;font-size:20px;
-   color:#DEA0FF}
+  font-family: 'Niconne', cursive;
+  font-size:20px;
+  color:#DEA0FF}
 .name:hover{color:#B9DDFF}
 .navBar{
   background-color:#84FFCE;
@@ -153,6 +154,16 @@
   opacity:0.0; 
   position:absolute;
   top:140px; 
-  left:500px }
+  left:650px }
 .displayPlay:hover{
   opacity:1}
+.vidBar{
+  background-color:#84FFCE; 
+  width:100%; 
+  height:2px}
+.vidName{
+  min-width:8em;
+  margin-left:145px;
+  font-family: 'Niconne', cursive;
+  font-size:20px;
+   color:#DEA0FF}

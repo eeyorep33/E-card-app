@@ -44,11 +44,9 @@ class App extends Component {
   }
   play = (id, ref) => {
 
-    //        let currentVid=this.state.videocards.find((el)=>{
-    // return el.id===id
-    //     }) 
+
     ref.play() 
-    //this.setState({current:currentVid}, ()=>{ref.play()})      
+       
 
   }
 
