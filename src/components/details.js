@@ -4,8 +4,10 @@ class Details extends Component {
             let ending = this.props.cards[i].source.substr(this.props.cards[i].source.length - 3, 3)
             if (ending === "mp4") {
                   return <div className="vidContainer"><video className="displayVid" ref={`specVideo`} src={this.props.cards[i].source}></video>
-                        <button className="displayPlay" onClick={() => this.props.play(i, this.refs.specVideo)}>
-                        {this.props.status==="play"? <i className="fas fa-pause"></i>:<i className="fas fa-play"></i>}</button>
+                        <button className={this.props.status==="play"?"playButton":"playButton hidden" } onClick={() => this.props.play(i, this.refs.specVideo)}>
+                        <i className="fas fa-pause"></i></button>
+                        <button className={this.props.status==="paused"?"playButton":"playButton hidden" } onClick={() => this.props.play(i, this.refs.specVideo)}>
+                       <i className="fas fa-play"></i></button>
                   </div>
             }
             else { return <img className="imgDetails" src={this.props.cards[i].source} /> }
