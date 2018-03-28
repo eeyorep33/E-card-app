@@ -142,49 +142,49 @@ class App extends Component {
                 submit={this.handleSubmit}
                 inventory={this.state.card_items}
                 cards={this.filterItems('birthday')}
-                {...props} />} />
+              {...props} />))} />
               <Route path="/cards/christmas" render={(props) => (
               !this.state.username ? (
               <Redirect to="/" exact />):(<Cards
                 submit={this.handleSubmit}
                 inventory={this.state.card_items}
                 cards={this.filterItems('christmas')}
-                {...props} />} />
+              {...props} />))} />
               <Route path="/cards/valentines" render={(props) => (
               !this.state.username ? (
               <Redirect to="/" exact />):(<Cards
                 submit={this.handleSubmit}
                 inventory={this.state.card_items}
                 cards={this.filterItems('valentines')}
-                {...props} />} />
+              {...props} />))} />
               <Route path="/cards/easter" render={(props) => (
               !this.state.username ? (
               <Redirect to="/" exact />):(<Cards
                 submit={this.handleSubmit}
                 inventory={this.state.card_items}
                 cards={this.filterItems('easter')}
-                {...props} />} />
+              {...props} />))} />
               <Route path="/cards/get_well" render={(props) => (
               !this.state.username ? (
               <Redirect to="/" exact />):(<Cards
                 submit={this.handleSubmit}
                 inventory={this.state.card_items}
                 cards={this.filterItems('get_well')}
-                {...props} />} />
+              {...props} />))} />
               <Route path="/cards/anniversary" render={(props) => (
               !this.state.username ? (
               <Redirect to="/" exact />):(<Cards
                 submit={this.handleSubmit}
                 inventory={this.state.card_items}
                 cards={this.filterItems('anniversary')}
-                {...props} />} />
+              {...props} />))} />
               <Route path="/cards/wedding" render={(props) => (
               !this.state.username ? (
               <Redirect to="/" exact />):(<Cards
                 submit={this.handleSubmit}
                 inventory={this.state.card_items}
                 cards={this.filterItems('wedding')}
-                {...props} />} />
+              {...props} />))} />
               <Route path="/videocards/birthday" render={(props) => (
               !this.state.username ? (
               <Redirect to="/" exact />):(<VideoCards
@@ -235,7 +235,6 @@ class App extends Component {
               <Redirect to="/" exact />):(<VideoCards
                 status={this.state.status}
                 play={this.play}
-
                 submit={this.handleSubmit}
                 inventory={this.state.videocards}
                 videos={this.filterVideos('anniversary')}
