@@ -5,7 +5,7 @@ class Details extends Component {
             if (ending === "mp4") {
                   return <div className="vidContainer"><video className="displayVid" ref={`specVideo`} src={this.props.cards[i].source}></video>
                         <button className="displayPlay" onClick={() => this.props.play(i, this.refs.specVideo)}>
-                        {this.props.status==="play"? <i className="fas fa-pause"></i>:<i className="fas fa-play"></i>}</button>
+                        <i className="fas fa-pause"></i></button>
                   </div>
             }
             else { return <img className="imgDetails" src={this.props.cards[i].source} /> }
