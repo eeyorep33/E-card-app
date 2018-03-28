@@ -15,7 +15,7 @@ class App extends Component {
       username: "",
       email: "",
       videocards: [],
-      //current:{}
+      status:"paused"
     }
   }
   componentWillMount() {
@@ -43,9 +43,13 @@ class App extends Component {
       })
   }
   play = (id, ref) => {
-
-
-    ref.play() 
+if(this.state.status==="paused"){
+  this.setState({status:play}, ()=>{ref.play()}) 
+}
+else if(this.state.status==="play"){
+  this.setState({status:"paused"}, ()=>{ref.pause()})
+}
+   
        
 
   }
