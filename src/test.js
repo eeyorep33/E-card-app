@@ -37,7 +37,8 @@ let sum=ar.reduce((total, num)=>{
       else if(a2>b2){suma+=1}
      
      
-  console.log (suma + ' ' + sumb);
+  return suma + ' ' +sumb
   }
 
-  solve(2,1,4,1,1,3)
+ let sum= solve(2,1,4,1,1,3)
+ console.log(sum)
