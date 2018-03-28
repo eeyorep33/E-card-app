@@ -20,9 +20,9 @@ class VideoCards extends Component {
                                     return (
                                           <div className="col-4 vidContainer">
                                                 <video className="vid"  ref={`video${i}`} src={item.source}></video>
-                                                <button className={this.props.status==="play"?"displayPause":"diplayPause hidden" }onClick={() => this.props.play(item.id, this.refs["video" + i])}>
+                                                <button className={this.props.status==="play"?"displayPause":"displayPause hidden" }onClick={() => this.props.play(item.id, this.refs["video" + i])}>
                                                 <i className="fas fa-pause"></i></button>
-                                                <button className={this.props.status==="paused"?"displayPlay":"diplayPlay hidden" } onClick={() => this.props.play(item.id, this.refs["video" + i])}>
+                                                <button className={this.props.status==="paused"?"displayPlay":"displayPlay hidden" } onClick={() => this.props.play(item.id, this.refs["video" + i])}>
                                                 <i className="fas fa-play"></i></button>
                                                 <Link to={match.url + '/' + item.id}><p className="vidName">{item.name}</p>
                                                 </Link>
